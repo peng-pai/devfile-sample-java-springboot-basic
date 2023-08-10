@@ -17,7 +17,7 @@ spec:
           image: java-springboot-image:latest
           ports:
             - name: http
-              containerPort: 8081
+              containerPort: 80
               protocol: TCP
           resources:
             limits:
