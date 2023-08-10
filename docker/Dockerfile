@@ -27,6 +27,6 @@ RUN mv /home/jboss/target/$(cat .env-id)-$(cat .env-version).jar /home/jboss/tar
 #FROM registry.access.redhat.com/ubi8/openjdk-17-runtime:1.15-1.1682053056
 FROM registry.access.redhat.com/ubi8/openjdk-8
 COPY --from=builder /home/jboss/target/export-run-artifact.jar  /deployments/export-run-artifact.jar
-EXPOSE 80
-ENTRYPOINT ["/opt/jboss/container/java/run/run-java.sh", "--server.port=80"]
+EXPOSE 8081
+ENTRYPOINT ["/opt/jboss/container/java/run/run-java.sh", "--server.port=8081"]
 
